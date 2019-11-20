@@ -4,9 +4,9 @@
 void RoutePage::setup() {}
 void RoutePage::init() {
   hasChanged = false;
-  note_interface.state = true;
+  note_interface.ni_active = true;
 }
-void RoutePage::cleanup() { note_interface.state = false; }
+void RoutePage::cleanup() { note_interface.ni_active = false; }
 void RoutePage::set_level(int curtrack, int value) {
   // in_sysex = 1;
   MD.setTrackParam(curtrack, 33, value);

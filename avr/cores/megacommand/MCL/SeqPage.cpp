@@ -47,7 +47,7 @@ void SeqPage::select_track(uint8_t device, uint8_t track) {
     last_md_track = track;
     if (track == md_exploit.track_with_nolocks) {
       md_exploit.off();
-      note_interface.state = true;
+      note_interface.ni_active = true;
       md_exploit.on();
     }
 #ifdef EXT_TRACK

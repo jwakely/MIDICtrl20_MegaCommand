@@ -31,7 +31,7 @@ public:
   uint8_t last_note;
   uint16_t note_hold = 0;
   bool note_proceed = false;
-  bool state = true;
+  bool ni_active = true;
   void init_notes();
   void setup();
   void draw_notes(uint8_t line_number);

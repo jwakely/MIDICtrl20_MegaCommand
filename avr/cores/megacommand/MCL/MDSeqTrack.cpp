@@ -43,7 +43,7 @@ void MDSeqTrack::seq() {
 
       // Dont transmit locks if MDExploit is on.
       if ((track_number != md_exploit.track_with_nolocks) ||
-          (!md_exploit.is_active)) {
+          (!md_exploit.ex_active)) {
         send_parameter_locks(step_count);
       }
 
@@ -55,7 +55,7 @@ void MDSeqTrack::seq() {
         ((timing[next_step]) == MidiClock.mod12_counter)) {
 
       if ((track_number != md_exploit.track_with_nolocks) ||
-          (!md_exploit.is_active)) {
+          (!md_exploit.ex_active)) {
         send_parameter_locks(next_step);
       }
 

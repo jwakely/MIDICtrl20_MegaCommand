@@ -25,7 +25,7 @@ void SeqRtrkPage::config() {
 void SeqRtrkPage::init() {
   SeqPage::init();
 
-  note_interface.state = true;
+  note_interface.ni_active = true;
 
   ((MCLEncoder *)encoders[0])->max = 4;
   ((MCLEncoder *)encoders[1])->max = 64;

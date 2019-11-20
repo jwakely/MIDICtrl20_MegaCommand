@@ -19,7 +19,7 @@ void GridWritePage::setup() {
 
   // MD.requestKit(MD.currentKit);
   md_exploit.on();
-  note_interface.state = true;
+  note_interface.ni_active = true;
   // GUI.display();
   curpage = W_PAGE;
 }

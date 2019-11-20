@@ -29,7 +29,7 @@ void OscPage::init() {
   wd.last_page = this;
   create_chars_mixer();
   // md_exploit.on();
-  note_interface.state = true;
+  note_interface.ni_active = true;
 #ifdef OLED_DISPLAY
   oled_display.clearDisplay();
 #endif
@@ -136,14 +136,14 @@ void OscPage::loop() {
   enc_->cur = 64 + diff;
   enc_->old = 64;
   if ((osc_waveform == SIN_OSC) || (osc_waveform == USR_OSC)) {
-    if (!md_exploit.is_active) {
+    if (!md_exploit.ex_active) {
       md_exploit.on();
-      note_interface.state = true;
+      note_interface.ni_active = true;
     }
   }
 
   else {
-    if (md_exploit.is_active) {
+    if (md_exploit.ex_active) {
       md_exploit.off();
     }
   }

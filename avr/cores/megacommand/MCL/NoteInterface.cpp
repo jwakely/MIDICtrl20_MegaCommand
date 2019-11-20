@@ -19,7 +19,7 @@ bool NoteInterface::is_event(gui_event_t *event) {
   return false;
 }
 void NoteInterface::note_on_event(uint8_t note_num, uint8_t port) {
-  if (!state) {
+  if (!ni_active) {
     DEBUG_PRINTLN("note interface disabled");
     return;
   }
@@ -40,7 +40,7 @@ void NoteInterface::note_on_event(uint8_t note_num, uint8_t port) {
   EventRB.putp(&event);
 }
 void NoteInterface::note_off_event(uint8_t note_num, uint8_t port) {
-  if (!state) {
+  if (!ni_active) {
     return;
   }
   DEBUG_PRINTLN(note_num);

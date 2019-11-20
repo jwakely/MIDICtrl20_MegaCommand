@@ -27,7 +27,7 @@ void SeqRlckPage::init() {
     MD.midi_events.disable_live_kit_update();
   }
   md_exploit.off();
-  note_interface.state = false;
+  note_interface.ni_active = false;
   recording = true;
   config();
 

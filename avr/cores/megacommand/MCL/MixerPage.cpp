@@ -72,7 +72,7 @@ void MixerPage::init() {
   encoders[2]->cur = 60;
   encoders[3]->cur = 60;
   bool switch_tracks = false;
-  note_interface.state = true;
+  note_interface.ni_active = true;
   midi_events.setup_callbacks();
   for (uint8_t i = 0; i < 16; i++) {
     for (uint8_t c = 0; c < 3; c++) {
@@ -101,7 +101,7 @@ void MixerPage::cleanup() {
 #ifdef OLED_DISPLAY
   oled_display.clearDisplay();
 #endif
-  note_interface.state = false;
+  note_interface.ni_active = false;
 
   midi_events.remove_callbacks();
 }

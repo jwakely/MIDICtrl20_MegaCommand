@@ -40,7 +40,7 @@ void SeqExtStepPage::init() {
   DEBUG_PRINTLN("seq extstep init");
   curpage = SEQ_EXTSTEP_PAGE;
   md_exploit.on();
-  note_interface.state = true;
+  note_interface.ni_active = true;
   config_encoders();
   midi_events.setup_callbacks();
 }

@@ -104,7 +104,7 @@ void SeqPtcPage::init() {
   DEBUG_PRINTLN(mcl_cfg.uart2_ctrl_mode);
   if (mcl_cfg.uart2_ctrl_mode == MIDI_LOCAL_MODE) {
     md_exploit.on();
-    note_interface.state = true;
+    note_interface.ni_active = true;
   } else {
     md_exploit.off();
     last_md_track = MD.currentTrack;

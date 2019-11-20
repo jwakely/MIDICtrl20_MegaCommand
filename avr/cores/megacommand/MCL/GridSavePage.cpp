@@ -7,7 +7,7 @@ void GridSavePage::setup() {
   MD.getCurrentPattern(CALLBACK_TIMEOUT);
   encoders[0]->cur = 1;
   md_exploit.on();
-  note_interface.state = true;
+  note_interface.ni_active = true;
   curpage = S_PAGE;
   grid_page.reload_slot_models = false;
 }

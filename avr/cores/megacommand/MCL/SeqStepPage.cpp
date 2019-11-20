@@ -42,7 +42,7 @@ void SeqStepPage::init() {
   curpage = SEQ_STEP_PAGE;
   md_exploit.on();
   config();
-  note_interface.state = true;
+  note_interface.ni_active = true;
 }
 
 void SeqStepPage::cleanup() {

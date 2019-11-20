@@ -18,7 +18,7 @@ void PageSelectPage::init() {
   oled_display.clearDisplay();
 #endif
   md_exploit.on();
-  note_interface.state = true;
+  note_interface.ni_active = true;
 }
 void PageSelectPage::cleanup() {
   note_interface.init_notes();
