@@ -136,14 +136,14 @@ void OscPage::loop() {
   enc_->cur = 64 + diff;
   enc_->old = 64;
   if ((osc_waveform == SIN_OSC) || (osc_waveform == USR_OSC)) {
-    if (!md_exploit.state) {
+    if (!md_exploit.is_active) {
       md_exploit.on();
       note_interface.state = true;
     }
   }
 
   else {
-    if (md_exploit.state) {
+    if (md_exploit.is_active) {
       md_exploit.off();
     }
   }
