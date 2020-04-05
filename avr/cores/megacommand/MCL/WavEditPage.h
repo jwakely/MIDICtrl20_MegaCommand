@@ -8,6 +8,7 @@
 
 #define WAV_DRAW_WIDTH 128
 #define WAV_DRAW_HEIGHT 32
+#define WAV_SECONDS 1.0 //maximmum sample length to display on screen
 
 class WavEditPage : public LightPage {
 public:
@@ -27,7 +28,7 @@ public:
   void open(char *file);
   void init();
   void loop();
-  void render(uint32_t sample_start, uint32_t sample_end, uint32_t offset, uint32_t samples_per_pixel);
+  void render(uint32_t sample_start, uint32_t sample_end, int32_t offset, uint32_t samples_per_pixel);
   void cleanup();
   void draw_wav();
 };
