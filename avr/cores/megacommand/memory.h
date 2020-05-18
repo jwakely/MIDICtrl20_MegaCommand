@@ -86,9 +86,9 @@ class RamBankSelector {
 #define select_bank(x) RamBankSelector __bank_selector(x)
 
 template<typename T>
-ALWAYS_INLINE() extern inline T get_bank1(volatile T *dst) {
+ALWAYS_INLINE() extern inline T get_bank1(volatile const T *src) {
   select_bank(1);
-  T c = *dst;
+  T c = *src;
   return c;
 }
 
@@ -110,9 +110,9 @@ ALWAYS_INLINE() extern inline void put_byte_bank1(volatile uint8_t *dst, uint8_t
   *dst = byte;
 }
 
-ALWAYS_INLINE() extern inline uint8_t get_byte_bank1(volatile uint8_t *dst) {
+ALWAYS_INLINE() extern inline uint8_t get_byte_bank1(volatile const uint8_t *src) {
   select_bank(1);
-  uint8_t c = *dst;
+  uint8_t c = *src;
   return c;
 }
 
